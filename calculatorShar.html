@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>My Calculator</title>
+
+    <style>
+        fieldset {
+            width: 400px;
+            margin: auto;
+            font-family: monospace;
+            font-size: 18px;
+            background-color: rgb(142, 252, 169);
+        }
+
+        legend {
+            font-size: 25px;
+        }
+
+        input {
+            padding: 7px 15px;
+            background-color: dimgrey;
+            color: white;
+            width: 50px;
+        }
+        
+        button {
+            padding: 5px 8px;
+            background-color: rgb(139, 71, 211);
+            color: white;
+            border-radius: 7px;
+        }
+    </style>
+
+    <script>
+		function add() 
+        {
+			const num1 = parseFloat(document.getElementById("num1").value);
+			const num2 = parseFloat(document.getElementById("num2").value);
+			let total = num1 + num2;
+			document.getElementById("total").value = total;
+		}
+
+		function subtract() 
+        {
+			const num1 = parseFloat(document.getElementById("num1").value);
+			const num2 = parseFloat(document.getElementById("num2").value);
+			let total = num1 - num2;
+			document.getElementById("total").value = total;
+		}
+
+		function multiply() 
+        {
+			const num1 = parseFloat(document.getElementById("num1").value);
+			const num2 = parseFloat(document.getElementById("num2").value);
+			let total = num1 * num2;
+			document.getElementById("total").value = total;
+		}
+
+		function divide() 
+        {
+			const num1 = parseFloat(document.getElementById("num1").value);
+			const num2 = parseFloat(document.getElementById("num2").value);
+			let total = num1 / num2;
+			document.getElementById("total").value = total;
+		}
+
+		function Clear() 
+        {
+			document.getElementById("num1").value = " ";
+			document.getElementById("num2").value = " ";
+			document.getElementById("total").value = " ";
+		}
+
+		function About() 
+        {
+			alert("Calculator created by Crisostomo, Sharmaine D.");
+		}
+	</script>
+
+</head>
+<body>
+
+    <fieldset>
+        <legend>CALCULATOR</legend>
+
+        <p>
+            <label for="num1">Input First Number : 
+                <input type="number"  name="num1" id="num1" required>
+                </label> 
+            </p>
+            
+            <p>
+                <label for="num2">Input Second Number : 
+                <input type="number"  name="num2" id="num2" required>
+            </label>
+            </p>
+            
+            <p>
+                <label for="total">Total Input : 
+                <input type="number"  name="total" id="total" disabled>
+            </label>
+            </p>
+
+
+            <button type="button" onclick="add()">Add</button>
+            <button type="button" onclick="subtract()">Subtract</button>
+            <button type="button" onclick="multiply()">Multiply</button>
+            <button type="button" onclick="divide()">Divide</button>
+            <button type="button" onclick="Clear()">Clear</button>
+            <button type="button" onclick="About()">About</button>
+
+
+    </fieldset>
+
+    
+</body>
+</html>
